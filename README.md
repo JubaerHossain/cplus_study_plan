@@ -1,9 +1,9 @@
 #Course Outline
 
--  Complexity
-  -  i) Time/Memory Complexity, examples of nested loops and recursions
--  STL
-  -  i) introduction, mechanism, library functions
+- Complexity
+  - i) Time/Memory Complexity, examples of nested loops and recursions
+- STL
+  - i) introduction, mechanism, library functions
   - ii) vector
   - iii) Stack/queue/deque
   - iv) Priority Queue
