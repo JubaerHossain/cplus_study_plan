@@ -4,25 +4,29 @@
 #include <cmath>
 using namespace std; 
 
-
-inline int recursion(int n) {
-    if (n == 1) return 1;
-    return n * recursion(n - 1);
-
-}
-
-int fibonacci(int n) {
-    if (n < 2) return 1;
-    return fibonacci(n - 2) + fibonacci(n - 1);
-}
-
 int main()
 {
     int n;
     cout << "Enter a number: ";
     cin >> n;
-    // cout << "Factorial of " << n << " is " << recursion(n) << endl;
-    cout << "Fibonacci of " << n << " is " << fibonacci(n) << endl;
+
+    // palindrome series of n numbers in reverse order
+    for (int i = n; i >= 1; i--)
+    {
+        int num = i;
+        int rev = 0;
+        while (num > 0)
+        {
+            int rem = num % 10;
+            rev = rev * 10 + rem;
+            num = num / 10;
+        }
+        if (i == rev)
+        {
+            cout << i << " ";
+        }
+    }
+    
     
     return 0;
 }
