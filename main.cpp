@@ -6,10 +6,11 @@ using namespace std;
 
 
 inline int sum(int x, int y) {
-    static int c = 0; // static variable is initialized & execute only once and is not destroyed when the function ends 
-    c++;
-    cout << c << endl;
-    return x + y + c;
+    // static int c = 0; // static variable is initialized & execute only once and is not destroyed when the function ends 
+    // c++;
+    // cout << c << endl;
+    // return x + y + c;
+    return x + y;
 }
 
 int main()
