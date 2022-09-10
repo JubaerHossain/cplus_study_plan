@@ -12,6 +12,16 @@ void swap(int &a, int &b) {
     b = temp;
 }
 
+void call_by_value(int a, int b) {
+    swap(a, b);
+    cout << "a = " << a << " b = " << b << endl;
+}
+
+void call_by_reference(int &a, int &b) {
+    swap(a, b);
+    cout << "a = " << a << " b = " << b << endl;
+}
+
 int main()
 {
     int x, y;
@@ -19,13 +29,16 @@ int main()
     cin >> x;
     cout << "Enter the number y : ";
     cin >> y;
-    cout << "Before swapping : " << endl;
-    cout << "x = " << x << endl;
-    cout << "y = " << y << endl;
-    swap(x, y);
-    cout << "After swapping : " << endl;
-    cout << "x = " << x << endl;
-    cout << "y = " << y << endl;
+
+
+    cout << "Call by value : " << endl;
+    call_by_value(x, y);
+    cout << "x = " << x << " y = " << y << endl;
+    cout << "Call by reference : " << endl;
+    call_by_reference(x, y);
+    cout << "x = " << x << " y = " << y << endl;
+
+
     
     return 0;
 }
