@@ -12,8 +12,8 @@ inline int recursion(int n) {
 }
 
 int fibonacci(int n) {
-    if (n < 2) return n;
-    return fibonacci(n - 1) + fibonacci(n - 2);
+    if (n < 2) return 1;
+    return fibonacci(n - 2) + fibonacci(n - 1);
 }
 
 int main()
@@ -22,7 +22,7 @@ int main()
     cout << "Enter a number: ";
     cin >> n;
     // cout << "Factorial of " << n << " is " << recursion(n) << endl;
-    cout << "Fibonacci of " << n << " is " << recursion(n) << endl;
+    cout << "Fibonacci of " << n << " is " << fibonacci(n) << endl;
     
     return 0;
 }
