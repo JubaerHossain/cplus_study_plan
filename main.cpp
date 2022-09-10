@@ -5,27 +5,18 @@
 using namespace std; 
 
 
-inline int sum(int x, int y) {
-    // static int c = 0; // static variable is initialized & execute only once and is not destroyed when the function ends 
-    // c++;
-    // cout << c << endl;
-    // return x + y + c;
-    return x + y;
+inline int recursion(int n) {
+    if (n == 1) return 1;
+    return n * recursion(n - 1);
+
 }
 
 int main()
 {
-    int x, y;
-    cout << "Enter the number x : ";
-    cin >> x;
-    cout << "Enter the number y : ";
-    cin >> y;
-
-    cout << "The sum of x and y is : " << sum(x, y) << endl;
-    cout << "The sum of x and y is : " << sum(x, y) << endl;
-    cout << "The sum of x and y is : " << sum(x, y) << endl;
-
-
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    cout << "Factorial of " << n << " is " << recursion(n) << endl;
     
     return 0;
 }
