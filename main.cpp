@@ -1,32 +1,46 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <cmath>
+#include<bits/stdc++.h>
+#define ll long long
+#define ld long double
+
 using namespace std; 
 
 int main()
 {
-    int n;
-    cout << "Enter a number: ";
-    cin >> n;
 
-    // palindrome series of n numbers in reverse order
-    for (int i = n; i >= 1; i--)
-    {
-        int num = i;
-        int rev = 0;
-        while (num > 0)
-        {
-            int rem = num % 10;
-            rev = rev * 10 + rem;
-            num = num / 10;
-        }
-        if (i == rev)
-        {
-            cout << i << " ";
-        }
-    }
-    
-    
+
+
+    ll a = 12;
+    ll b = 25;
+
+    // and operator
+    cout << "And is : " << (a & b) << endl;
+
+    // or operator
+
+    cout << "Or is : " << (a | b) << endl;
+
+
+
+    // xor of all numbers from 1 to n
+    ll ans = a^b;
+    cout<<"xor ans = "<<ans<<endl;
+
+    // 2's complement
+
+    cout << "2's complement of - 150 is : " << (~(-150)) << endl;
+
+
+
+    // left shift
+    ll c = 4;
+    ll d = c << 2;
+    cout<<"left shift = "<<d<<endl;
+
+    // right shift
+
+    ll e = 16;
+    ll f = e >> 2;
+    cout<<"right shift = "<<f<<endl;
+
     return 0;
 }
