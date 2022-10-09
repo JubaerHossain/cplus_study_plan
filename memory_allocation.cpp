@@ -41,6 +41,15 @@ int main()
     cout << "Name is " << m1.name << endl;
 
 
+    // heap memory allocation
+    struct mystruct * m3;
+    m3 = (struct mystruct *)malloc(sizeof(struct mystruct));
+    m3->age = 35;
+    m3->name = "Hossain";
+    cout << "Age is " << m3->age << endl;
+    cout << "Name is " << m3->name << endl;
+
+
 
 
 
