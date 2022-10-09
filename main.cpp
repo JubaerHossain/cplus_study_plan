@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 #define ll long long
 #define ld long double
+
 #define pb push_back
 #define pf push_front
 #define ppb pop_back
@@ -15,6 +16,11 @@
 #define uniq(a) sort(all(a)); (a).erase(unique((a).begin(),(a).end()),(a).end())
 #define tc int test; cin>>test; while(test--)
 using namespace std; 
+#define M 1000000
+
+bool marked[M];
+
+
 
 bool prime_number(ll n)
 {
