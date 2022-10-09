@@ -28,14 +28,17 @@ int main()
     struct mystruct m1;
     m1.name = "john";
     m1.age = 25;
-    cout << "result is " << m1.age << endl;
+    cout << "Age is " << m1.age << endl;
+    cout << "Name is " << m1.name << endl;
 
     struct mystruct * m2;
     m2 = &m1;
 
     (*m2).age = 30;
+    m2->name = "Jubaer";
     
-    cout << "result is " << m1.age << endl;
+    cout << "Age is " << m1.age << endl;
+    cout << "Name is " << m1.name << endl;
 
 
 
