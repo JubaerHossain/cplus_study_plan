@@ -16,31 +16,23 @@
 #define tc int test; cin>>test; while(test--)
 using namespace std; 
 
-int count1(int n){
-    int count = 0;
-    while(n > 0){
-        n = n / 10;
-        count++;
+int reverse(int n){
+    int rev=0;
+    while(n>0){
+        rev=rev*10+n%10;
+        n/=10;
     }
-    return count;
+    return rev;
 
 }
-int count2(int n){
-   return  to_string(n).length();
-}
 
-int count3(int n){
 
-   return floor(log10(n) + 1);
-}
 
 int main()
 {
-    int n = 13;
+    int n = 17683;
 
-    cout<<count1(n)<<endl;
-    cout<<count2(n)<<endl;
-    cout<<count3(n)<<endl;
+    cout<<reverse(n);
 
     return 0;
 }   
