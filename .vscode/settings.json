@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["Hossain", "Jubaer", "mystruct"]
+  "cSpell.words": ["Hossain", "Jubaer", "mystruct"],
+  "files.associations": {
+    "vector": "cpp"
+  }
 }
