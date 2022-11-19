@@ -2,18 +2,44 @@
 
 using namespace std;
 
-int peakEleBruteForce(int arr[], int n) {
-    cout << arr[0] << " " << arr[1] << endl;
-  if (arr[0] >= arr[1]){
-    return arr[0];
-  }
+int search(int arr[], int n,int f) {
 
-  for (int i = 1; i < n - 1; i++){
-    if (arr[i] >= arr[i - 1] && arr[i] >= arr[i + 1])
-      return arr[i];
-  }
+    int low = 0, high = n;
 
-  return arr[n - 1];
+    while (low <= high) // continue the loop till the end of array
+    {
+        cout << " low = " << low << " high = " << high << endl;
+        cout << endl;
+        int mid = low + (high - low) / 2;  // find the mid of the array
+        cout << " mid = " << mid << endl;
+        cout << endl;
+        cout << " arr[mid] = " << arr[mid] << endl;
+
+
+        if(arr[mid] == f) return mid; // if match the element return the index
+
+
+        if(arr[low] <= arr[mid]){
+            if( arr[low] <= f && f <= arr[mid]){
+                high = mid - 1;
+            }
+            else{
+                low = mid + 1;
+            }
+        }else{
+            if(arr[mid] <= f && f <= arr[high]){
+                low = mid + 1;
+            }else{
+                high = mid - 1;
+            }
+
+        }
+    }
+
+    
+
+
+  return -1;
 }
 
 int main() {
@@ -21,7 +47,7 @@ int main() {
   int arr[] = { 1, 3, 20, 4, 1, 0 };
   int n = sizeof(arr) / sizeof(arr[0]);
 
-  cout << "Peak Element is " << peakEleBruteForce(arr, n);
+  cout << "position is  " << search(arr, n, 4);
 
   return 0;
 }
